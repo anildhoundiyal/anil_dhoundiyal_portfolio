@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anil Dhoundiyal - Frontend Developer & React Developer. Building fast, beautiful, and accessible web experiences." />
+  <meta name="keywords" content="Frontend Developer, React Developer, Web Developer, Next.js, JavaScript, HTML, CSS" />
+  <meta name="author" content="Anil Dhoundiyal" />
+  <meta property="og:title" content="Anil Dhoundiyal — Frontend Developer" />
+  <meta property="og:description" content="React & Frontend Developer crafting performant web experiences." />
+  <meta property="og:type" content="website" />
+  <title>Anil Dhoundiyal — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR (hidden on touch devices via CSS) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Anil Dhoundiyal Home">
+        <span class="logo-bracket">&lt;</span>AD<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="#about"    class="nav-link" data-section="about">About</a>
+        <a href="#skills"   class="nav-link" data-section="skills">Skills</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#contact"  class="nav-link" data-section="contact">Contact</a>
+        <a href="anil_dhoundiyal_resume.pdf" class="nav-resume-btn" download="Anil_Dhoundiyal_Resume.pdf" aria-label="Download Resume">
+          <i class='bx bx-download'></i> Resume
+        </a>
+      </nav>
+
+      <div class="nav-right">
+        <!-- Dark / Light Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class='bx bx-sun  theme-icon-sun'></i>
+          <i class='bx bx-moon theme-icon-moon'></i>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="hero-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-orb orb-2" aria-hidden="true"></div>
+      <div class="hero-orb orb-3" aria-hidden="true"></div>
+      <div class="hero-grid"     aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-tag reveal-up">
+          <span class="tag-dot"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="hero-title reveal-up" style="--delay:0.1s">
+          Hi, I'm <span class="name-highlight">Anil</span><br />
+          <span class="hero-title-sub">Dhoundiyal</span>
+        </h1>
+
+        <div class="hero-role reveal-up" style="--delay:0.2s">
+          <span class="role-prefix">I build as a</span>
+          <span class="typing-wrapper">
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </span>
+        </div>
+
+        <p class="hero-desc reveal-up" style="--delay:0.3s">
+          Frontend Developer with internship experience building responsive, scalable web apps
+          using React.js, Next.js &amp; Redux Toolkit. Passionate about clean UI &amp; performance.
+        </p>
+
+        <div class="hero-ctas reveal-up" style="--delay:0.4s">
+          <a href="#projects" class="btn-primary">
+            <span>View My Work</span>
+            <i class='bx bx-right-arrow-alt'></i>
+          </a>
+          <a href="anil_dhoundiyal_resume.pdf" class="btn-ghost" download="Anil_Dhoundiyal_Resume.pdf">
+            <i class='bx bx-download'></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+        <div class="hero-socials reveal-up" style="--delay:0.5s">
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <a href="mailto:anildhoundiyal12345@gmail.com" class="social-icon" aria-label="Email Anil">
+            <i class='bx bx-envelope'></i>
+          </a>
+          <a href="tel:+919968824196" class="social-icon" aria-label="Call Anil">
+            <i class='bx bx-phone'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Code window decoration -->
+      <div class="hero-code-window reveal-right" aria-hidden="true">
+        <div class="code-window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-file">developer.jsx</span>
+        </div>
+        <pre class="code-body"><code><span class="c-purple">const</span> <span class="c-blue">Anil</span> = () =&gt; {
+  <span class="c-purple">return</span> {
+    <span class="c-yellow">name</span>: <span class="c-green">"Anil Dhoundiyal"</span>,
+    <span class="c-yellow">role</span>: <span class="c-green">"Frontend Developer"</span>,
+    <span class="c-yellow">location</span>: <span class="c-green">"Delhi, India"</span>,
+    <span class="c-yellow">stack</span>: [
+      <span class="c-green">"React"</span>, <span class="c-green">"Next.js"</span>,
+      <span class="c-green">"Redux"</span>, <span class="c-green">"TypeScript"</span>
+    ],
+    <span class="c-yellow">email</span>: <span class="c-green">"anildhoundiyal"</span>
+           + <span class="c-green">"12345@gmail.com"</span>,
+    <span class="c-yellow">available</span>: <span class="c-purple">true</span>
+  };
+};
+
+<span class="c-purple">export default</span> Anil;</code></pre>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+        <span class="scroll-text">Scroll Down</span>
+        <span class="scroll-arrow"></span>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about section" id="about" aria-label="About section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">// get_to_know_me</span>
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual reveal-left">
+            <div class="about-photo-wrap">
+              <div class="about-photo-placeholder">
+                <img class="profile-pic" src="big.png" alt="profile-pic">
+
+                <!-- <span class="photo-initials">AD</span> -->
+                <div class="photo-ring"></div>
+                <div class="photo-ring ring-2"></div>
+              </div>
+              <div class="about-badge">
+                <i class='bx bx-code-alt'></i>
+                <span>Intern @ Cepialabs</span>
+              </div>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-count="7">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Technologies</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span>
+                <span class="stat-label">Dedication</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text reveal-right">
+            <h3 class="about-subtitle">
+              Frontend Developer passionate about <span class="accent">clean UI &amp; performance.</span>
+            </h3>
+            <p>
+              I'm <strong>Anil Dhoundiyal</strong>, a Frontend Developer based in <strong>Delhi, India</strong>,
+              currently pursuing my BCA from IGNOU. I have hands-on internship experience at
+              <strong>Cepialabs</strong>, building production-level apps with React.js, Next.js &amp; Redux Toolkit.
+            </p>
+            <p>
+              I specialise in scalable component architecture, REST API integration, and
+              performance-optimised responsive design. I've shipped real products including an
+              <strong>E-Commerce Platform</strong> and a <strong>TeleHealth Portal</strong> with AI-powered doctor recommendation.
+            </p>
+            <p>
+              I'm actively looking for <strong>Frontend / React Developer roles</strong> where I can grow, learn, and ship impactful products.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item"><i class='bx bx-check-circle'></i> React.js &amp; Next.js Development</div>
+              <div class="highlight-item"><i class='bx bx-check-circle'></i> Redux Toolkit State Management</div>
+              <div class="highlight-item"><i class='bx bx-check-circle'></i> REST API Integration</div>
+              <div class="highlight-item"><i class='bx bx-check-circle'></i> Mobile-first Responsive Design</div>
+            </div>
+
+            <div class="about-ctas">
+              <a href="anil_dhoundiyal_resume.pdf" class="btn-primary" download="Anil_Dhoundiyal_Resume.pdf">
+                <i class='bx bx-download'></i>
+                <span>Download Resume</span>
+              </a>
+              <a href="#contact" class="btn-ghost"><span>Hire Me</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="skills section" id="skills" aria-label="Skills section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">// tech_stack</span>
+          <h2 class="section-title">My <span class="accent">Skills</span></h2>
+          <p class="section-desc">Technologies and tools I use to bring ideas to life.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal-up" style="--delay:0s">
+            <div class="skill-icon-wrap"><i class='bx bxl-html5 skill-icon'></i></div>
+            <div class="skill-info"><h3>HTML5</h3><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.05s">
+            <div class="skill-icon-wrap"><i class='bx bxl-css3 skill-icon'></i></div>
+            <div class="skill-info"><h3>CSS3</h3><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.1s">
+            <div class="skill-icon-wrap"><i class='bx bxl-javascript skill-icon'></i></div>
+            <div class="skill-info"><h3>JavaScript (ES6+)</h3><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="84"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.15s">
+            <div class="skill-icon-wrap"><i class='bx bxl-react skill-icon'></i></div>
+            <div class="skill-info"><h3>React.js</h3><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="86"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.2s">
+            <div class="skill-icon-wrap"><i class='bx bx-code skill-icon'></i></div>
+            <div class="skill-info"><h3>Next.js</h3><span class="skill-level">Intermediate</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.25s">
+            <div class="skill-icon-wrap"><i class='bx bx-store skill-icon'></i></div>
+            <div class="skill-info"><h3>Redux Toolkit</h3><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.3s">
+            <div class="skill-icon-wrap"><i class='bx bxl-git skill-icon'></i></div>
+            <div class="skill-info"><h3>Git &amp; GitHub</h3><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+          </div>
+          <div class="skill-card reveal-up" style="--delay:0.35s">
+            <div class="skill-icon-wrap"><i class='bx bx-mobile skill-icon'></i></div>
+            <div class="skill-info"><h3>Responsive Design</h3><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+          </div>
+        </div>
+
+        <div class="tools-section reveal-up">
+          <p class="tools-label">Also comfortable with:</p>
+          <div class="tools-row">
+            <span class="tool-tag"><i class='bx bxl-typescript'></i> TypeScript (Basic)</span>
+            <span class="tool-tag"><i class='bx bx-data'></i> MongoDB (Basic)</span>
+            <span class="tool-tag"><i class='bx bx-link'></i> REST APIs</span>
+            <span class="tool-tag"><i class='bx bxs-terminal'></i> VS Code</span>
+            <span class="tool-tag"><i class='bx bx-bar-chart'></i> Google Analytics</span>
+            <span class="tool-tag"><i class='bx bx-search'></i> Search Console</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="projects section" id="projects" aria-label="Projects section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">// featured_work</span>
+          <h2 class="section-title">My <span class="accent">Projects</span></h2>
+          <p class="section-desc">Real-world projects I designed and built. Hover a card to see details.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal-up" style="--delay:0s">
+            <div class="project-card-inner">
+              <div class="project-front">
+                <div class="project-mockup ecommerce-bg">
+                  <div class="mockup-browser">
+                    <div class="browser-bar">
+                      <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                      <span class="browser-url">ecommerce-app.vercel.app</span>
+                    </div>
+                    <div class="browser-content">
+                      <div class="mc-header"></div>
+                      <div class="mc-row">
+                        <div class="mc-card"></div><div class="mc-card"></div><div class="mc-card"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-front-info">
+                  <div class="project-number">01</div>
+                  <h3>E-Commerce Web App</h3>
+                  <p>Full-featured shopping platform with search, filter, cart &amp; wishlist.</p>
+                </div>
+              </div>
+              <div class="project-back">
+                <div class="project-tags">
+                  <span>React.js</span><span>Next.js</span><span>Redux Toolkit</span><span>REST API</span>
+                </div>
+                <h3>E-Commerce Web Application</h3>
+                <p>Architected a fully responsive e-commerce app with SSR/SSG via Next.js. Third-party product API integration for real-time catalog. Advanced search, category filtering, and Wishlist with persistent Redux state.</p>
+                <ul class="project-features">
+                  <li><i class='bx bx-check'></i> Dynamic search &amp; category filter</li>
+                  <li><i class='bx bx-check'></i> Wishlist &amp; persistent cart</li>
+                  <li><i class='bx bx-check'></i> SSR for fast page loads</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#" class="plink-live"><i class='bx bx-link-external'></i> Live Demo</a>
+                  <a href="https://github.com/your-username" class="plink-github" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Featured -->
+          <article class="project-card reveal-up featured-card" style="--delay:0.1s">
+            <div class="project-card-inner">
+              <div class="project-front">
+                <div class="project-mockup doctor-bg">
+                  <div class="mockup-browser">
+                    <div class="browser-bar">
+                      <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                      <span class="browser-url">telehealth-portal.vercel.app</span>
+                    </div>
+                    <div class="browser-content">
+                      <div class="mc-sidebar"></div>
+                      <div class="mc-dashboard">
+                        <div class="mc-stat-row">
+                          <div class="mc-stat"></div><div class="mc-stat"></div><div class="mc-stat"></div>
+                        </div>
+                        <div class="mc-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-front-info">
+                  <div class="project-number">02</div>
+                  <div class="featured-badge">⭐ Featured</div>
+                  <h3>TeleHealth Care Portal</h3>
+                  <p>Healthcare portal with AI assistant, role-based auth &amp; dashboards.</p>
+                </div>
+              </div>
+              <div class="project-back">
+                <div class="project-tags">
+                  <span>Next.js</span><span>REST API</span><span>AI Integration</span><span>Auth</span>
+                </div>
+                <h3>TeleHealth — Doctor Patient Portal</h3>
+                <p>Role-based portal (Doctor/Patient/Employee) with AI-powered symptom collector that recommends doctors by specialisation. Appointment booking, consultation history, full onboarding flows, and cross-browser responsive design.</p>
+                <ul class="project-features">
+                  <li><i class='bx bx-check'></i> Role-based authentication</li>
+                  <li><i class='bx bx-check'></i> AI doctor recommender</li>
+                  <li><i class='bx bx-check'></i> Appointment booking flow</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#" class="plink-live"><i class='bx bx-link-external'></i> Live Demo</a>
+                  <a href="https://github.com/your-username" class="plink-github" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal-up" style="--delay:0.2s">
+            <div class="project-card-inner">
+              <div class="project-front">
+                <div class="project-mockup portfolio-bg">
+                  <div class="mockup-browser">
+                    <div class="browser-bar">
+                      <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                      <span class="browser-url">anildhoundiyal.netlify.app</span>
+                    </div>
+                    <div class="browser-content">
+                      <div class="mc-hero-mock">
+                        <div class="mc-avatar"></div>
+                        <div class="mc-lines">
+                          <div class="mc-line w80"></div>
+                          <div class="mc-line w60"></div>
+                          <div class="mc-line w40"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-front-info">
+                  <div class="project-number">03</div>
+                  <h3>Personal Portfolio</h3>
+                  <p>This portfolio — designed &amp; built entirely from scratch.</p>
+                </div>
+              </div>
+              <div class="project-back">
+                <div class="project-tags">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Animations</span>
+                </div>
+                <h3>Personal Portfolio Website</h3>
+                <p>The very site you're viewing. Custom cursor, typing animation, card-flip project reveals, dark/light mode toggle, scroll-reveal effects, and fully responsive mobile layout — zero frameworks.</p>
+                <ul class="project-features">
+                  <li><i class='bx bx-check'></i> Dark / Light mode toggle</li>
+                  <li><i class='bx bx-check'></i> Typing animation &amp; scroll reveal</li>
+                  <li><i class='bx bx-check'></i> Fully mobile responsive</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#" class="plink-live"><i class='bx bx-link-external'></i> Live Demo</a>
+                  <a href="https://github.com/your-username" class="plink-github" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-cta reveal-up">
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class='bx bxl-github'></i> View All on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact section" id="contact" aria-label="Contact section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-eyebrow">// get_in_touch</span>
+          <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+          <p class="section-desc">Have an opportunity or want to say hello? My inbox is always open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: contact info -->
+          <div class="contact-info reveal-left">
+            <h3>Let's <span class="accent">work together.</span></h3>
+            <p>
+              I'm actively looking for Frontend / React Developer roles, internships, and freelance projects.
+              Drop me a message and I'll get back to you within 24 hours.
+            </p>
+
+            <div class="contact-cards">
+              <a href="mailto:anildhoundiyal12345@gmail.com" class="contact-card">
+                <div class="cc-icon"><i class='bx bx-envelope'></i></div>
+                <div class="cc-text">
+                  <span class="cc-label">Email</span>
+                  <span class="cc-value">anildhoundiyal12345@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+919968824196" class="contact-card">
+                <div class="cc-icon"><i class='bx bx-phone'></i></div>
+                <div class="cc-text">
+                  <span class="cc-label">Phone</span>
+                  <span class="cc-value">+91 9968824196</span>
+                </div>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="cc-icon"><i class='bx bxl-linkedin'></i></div>
+                <div class="cc-text">
+                  <span class="cc-label">LinkedIn</span>
+                  <span class="cc-value">linkedin.com/in/anil-dhoundiyal</span>
+                </div>
+              </a>
+              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="cc-icon"><i class='bx bxl-github'></i></div>
+                <div class="cc-text">
+                  <span class="cc-label">GitHub</span>
+                  <span class="cc-value">github.com/your-username</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Resume download card -->
+            <a href="anil_dhoundiyal_resume.pdf" class="resume-download-card" download="Anil_Dhoundiyal_Resume.pdf" aria-label="Download Anil Dhoundiyal Resume PDF">
+              <div class="rdc-left">
+                <i class='bx bxs-file-pdf rdc-pdf-icon'></i>
+                <div class="rdc-text">
+                  <span class="rdc-title">Anil_Dhoundiyal_Resume.pdf</span>
+                  <span class="rdc-sub">Click to download &bull; PDF</span>
+                </div>
+              </div>
+              <i class='bx bx-download rdc-arrow'></i>
+            </a>
+
+            <div class="availability-badge">
+              <span class="avail-dot"></span>
+              Available for full-time &amp; freelance work
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <form class="contact-form reveal-right" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nameInput">Your Name</label>
+                <input type="text" id="nameInput" name="name" placeholder="John Doe" required autocomplete="name" />
+                <span class="form-error" id="nameError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="emailInput">Your Email</label>
+                <input type="email" id="emailInput" name="email" placeholder="john@example.com" required autocomplete="email" />
+                <span class="form-error" id="emailError" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subjectInput">Subject</label>
+              <input type="text" id="subjectInput" name="subject" placeholder="Job Opportunity / Project / Collaboration" required />
+              <span class="form-error" id="subjectError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Message</label>
+              <textarea id="messageInput" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <span class="form-error" id="messageError" role="alert"></span>
+            </div>
+            <button type="submit" class="btn-primary form-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <i class='bx bx-send btn-icon'></i>
+              <span class="btn-loader" aria-hidden="true"></span>
+            </button>
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              <i class='bx bx-check-circle'></i>
+              <span>Message sent! I'll reply within 24 hours. 🎉</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>AD<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Frontend Developer crafting beautiful, performant web experiences with React &amp; modern JavaScript. Based in Delhi, India.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+          <a href="mailto:anildhoundiyal12345@gmail.com"><i class='bx bx-envelope'></i> Email Me</a>
+          <a href="tel:+919968824196"><i class='bx bx-phone'></i> +91 9968824196</a>
+          <a href="anil_dhoundiyal_resume.pdf" download="Anil_Dhoundiyal_Resume.pdf"><i class='bx bx-download'></i> Resume</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed &amp; Built by <span class="accent">Anil Dhoundiyal</span> &copy; <span id="year"></span></p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
